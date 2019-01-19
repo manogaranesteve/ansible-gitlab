@@ -1,0 +1,12 @@
+#- hosts: 127.0.0.1
+  #tasks:
+    #- name : git clone
+    #  git:
+    #    repo: http://10.10.20.6/root/socle.git
+    #    dest: /etc/ansible/roles/socle
+    #- name : deploiement local socle
+ #     roles:
+  #      role: socle
+- hosts: 127.0.0.1
+  roles:
+        - role: socle

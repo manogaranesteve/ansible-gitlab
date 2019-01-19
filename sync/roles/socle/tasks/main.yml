@@ -1,0 +1,15 @@
+---
+# tasks file for socle
+- name: set timezone to Europe/Paris
+  timezone:
+      name: Europe/Paris
+      
+- name: google dns
+  lineinfile:
+      line: "google 8.8.8.8"
+      dest: "/etc/resolv.conf"
+
+- name: Update apt packages
+  become: true
+  apt:
+      update_cache: yes

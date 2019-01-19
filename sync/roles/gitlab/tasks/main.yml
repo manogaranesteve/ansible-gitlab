@@ -1,0 +1,24 @@
+---
+# tasks file for gitlab
+- name : instalation openssh-server ca-certificates
+  apt:
+    name: ['openssh-server', 'ca-certificates']
+    state: present
+
+- name  : instlation postfix
+  apt:
+    name: "postfix"
+    state: present
+
+- name  : gitlab repository
+  get_url:
+    url: 'https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh'
+    dest: /tmp/gitlab.sh
+    
+- name  : bash
+  command: bash /tmp/gitlab.sh
+
+- name  : instlation gitlab-ce
+  apt:
+    name: "gitlab-ce"
+    state: present

@@ -1,0 +1,4 @@
+- hosts: client1, client2
+  roles:
+    - role: ansible-server
+    - role: setup-agent
