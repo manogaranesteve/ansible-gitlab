@@ -16,6 +16,7 @@ url to gitlab : 10.10.20.6
 ### Prerequisites
 
 install vagrant 
+https://www.vagrantup.com/downloads.html
 
 
 ## Built With
